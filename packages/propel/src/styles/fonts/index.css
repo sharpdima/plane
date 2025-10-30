@@ -127,6 +127,15 @@
   font-display: swap;
 }
 
+/* If you only have a single Vazirmatn file (e.g. vazirmatn.woff2), use it as a fallback for common weights. */
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 400 700;
+  src: url('./Vazirmatn/vazirmatn.woff2') format('woff2');
+  font-display: swap;
+}
+
 /* Apply Vazirmatn when Persian (fa) is active. We toggle the `lang-fa` class on <html>. */
 html.lang-fa,
 html.lang-fa body {
