@@ -1,1 +1,3 @@
-﻿import enTranslations from "../en/translations";`r`n`r`nexport default enTranslations as const;
+﻿import enTranslations from "../en/translations";
+
+export default enTranslations as const;
