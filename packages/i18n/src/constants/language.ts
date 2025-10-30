@@ -1,4 +1,4 @@
-import { TLanguage, ILanguageOption } from "../types";
+﻿import { TLanguage, ILanguageOption } from "../types";
 
 export const FALLBACK_LANGUAGE: TLanguage = "en";
 
@@ -21,8 +21,7 @@ export const SUPPORTED_LANGUAGES: ILanguageOption[] = [
   { label: "Indonesian", value: "id" },
   { label: "Română", value: "ro" },
   { label: "Tiếng việt", value: "vi-VN" },
-  { label: "Türkçe", value: "tr-TR" },
-];
+  { label: "Türkçe", value: "tr-TR" },  { label: "فارسی", value: "fa" },`r`n];
 
 /**
  * Enum for translation file names
@@ -36,3 +35,4 @@ export enum ETranslationFiles {
 }
 
 export const LANGUAGE_STORAGE_KEY = "userLanguage";
+

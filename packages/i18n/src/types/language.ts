@@ -1,5 +1,5 @@
-export type TLanguage =
-  | "en"
+﻿export type TLanguage =
+  | "en"`r`n  | "fa"
   | "fr"
   | "es"
   | "ja"
@@ -23,3 +23,4 @@ export interface ILanguageOption {
   label: string;
   value: TLanguage;
 }
+

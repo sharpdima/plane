@@ -1,4 +1,4 @@
-// Export all locale files to make them accessible from the package root
+﻿// Export all locale files to make them accessible from the package root
 export { default as enCore } from "./en/core";
 export { default as enTranslations } from "./en/translations";
 export { default as enAccessibility } from "./en/accessibility";
@@ -122,4 +122,6 @@ export const locales = {
     editor: () => import("./tr-TR/editor"),
     "empty-state": () => import("./tr-TR/empty-state"),
   },
+  fa: {`r`n    translations: () => import("./fa/translations"),`r`n    accessibility: () => import("./fa/accessibility"),`r`n    editor: () => import("./fa/editor"),`r`n    "empty-state": () => import("./fa/empty-state"),`r`n  },`r`n
 };
+
