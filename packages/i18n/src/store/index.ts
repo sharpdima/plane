@@ -261,6 +261,16 @@ export class TranslationStore {
       if (typeof window !== "undefined") {
         localStorage.setItem(LANGUAGE_STORAGE_KEY, lng);
         document.documentElement.lang = lng;
+          // Update document lang/dir and add lang-fa class for Persian (client-side only)
+          try {
+            if (typeof window !== 'undefined' && document?.documentElement) {
+              const isFa = lng === 'fa';
+              document.documentElement.dir = isFa ? 'rtl' : 'ltr';
+              document.documentElement.classList.toggle('lang-fa', isFa);
+            }
+          } catch (e) {
+            // safe no-op on server or environments without DOM
+          }
       }
 
       runInAction(() => {

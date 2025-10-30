@@ -85,3 +85,55 @@
   font-feature-settings: "liga";
   -webkit-font-smoothing: antialiased;
 }
+
+/* Vazirmatn (Persian) - local @font-face declarations
+   Place Vazirmatn woff2 files in the `Vazirmatn/` folder (see README).
+   Expected filenames:
+     - Vazirmatn-300.woff2
+     - Vazirmatn-400.woff2
+     - Vazirmatn-500.woff2
+     - Vazirmatn-700.woff2
+*/
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 300;
+  src: url('./Vazirmatn/Vazirmatn-300.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 400;
+  src: url('./Vazirmatn/Vazirmatn-400.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 500;
+  src: url('./Vazirmatn/Vazirmatn-500.woff2') format('woff2');
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Vazirmatn";
+  font-style: normal;
+  font-weight: 700;
+  src: url('./Vazirmatn/Vazirmatn-700.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* Apply Vazirmatn when Persian (fa) is active. We toggle the `lang-fa` class on <html>. */
+html.lang-fa,
+html.lang-fa body {
+  font-family: "Vazirmatn", Inter, sans-serif;
+}
+
+/* Ensure direction is RTL when the class is present as a fallback (code also sets dir on <html>). */
+html.lang-fa {
+  direction: rtl;
+}
